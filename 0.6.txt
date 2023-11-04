@@ -1,0 +1,8 @@
+0.6
+Käyttäjä ->> Selain: Kirjoittaa muistiinpanon sisällön
+Käyttäjä ->> Selain: Painaa "Tallenna" -nappia
+
+selain ->> Palvelin: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+Palvelin ->> Selain: new_note_spa tiedosto
+JavaScript ->> Selain: Päivittää käyttöliittymää tai näyttää vahvistussivun
+Selain ->> Käyttäjä: Näyttää vahvistussivun tai päivitetyn muistiinpanolistauksen
